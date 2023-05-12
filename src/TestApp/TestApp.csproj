@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Webefinity.EventSource.Cache.Dict\Webefinity.EventSource.Cache.Dict.csproj" />
+    <ProjectReference Include="..\Entity_Person\Entity_Person.csproj" />
+    <ProjectReference Include="..\Webefinity.EventSource.Cache.Memory\Webefinity.EventSource.Cache.Memory.csproj" />
+    <ProjectReference Include="..\Webefinity.EventSource.EventStoreDb\Webefinity.EventSource.EventStoreDb.csproj" />
+    <ProjectReference Include="..\Webefinity.EventSource.File\Webefinity.EventSource.File.csproj" />
+    <ProjectReference Include="..\Webefinity.EventSource.InMemoryDb\Webefinity.EventSource.InMemoryDb.csproj" />
+  </ItemGroup>
+
+</Project>

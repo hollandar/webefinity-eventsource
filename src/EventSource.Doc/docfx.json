@@ -1,0 +1,65 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "Webefinity.EventSource.Cache.Dict/Webefinity.EventSource.Cache.Dict.csproj.csproj",
+            "Webefinity.EventSource.Cache.Memory/Webefinity.EventSource.Cache.Memory.csproj",
+            "Webefinity.EventSource.Core/Webefinity.EventSource.Core.csproj",
+            "Webefinity.EventSource.EventStoreDb/Webefinity.EventSource.EventStoreDb.csproj",
+            "Webefinity.EventSource.File/Webefinity.EventSource.File.csproj",
+            "Webefinity.EventSource.InMemoryDb/Webefinity.EventSource.InMemoryDb.csproj"
+          ],
+          "src": "../"
+        }
+      ],
+      "dest": "api",
+      "includePrivateMembers": false,
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "noRestore": false,
+      "namespaceLayout": "flattened",
+      "memberLayout": "samePage",
+      "allowCompilationErrors": false
+    }
+  ],
+  "build": {
+    "globalMetadata":{
+      "_appLogoPath": "images/popper_logo.png"
+    },
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "../../docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "modern"
+    ],
+    "postProcessors": [],
+    "keepFileLink": false,
+    "disableGitFeatures": false
+  }
+}

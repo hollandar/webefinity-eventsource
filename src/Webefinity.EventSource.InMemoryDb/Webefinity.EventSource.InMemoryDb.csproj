@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	  <Version>0.2.3</Version>
+	  <Description>An in memory storage provider for unit testing purposes, for Outrage.EventSource.</Description>
+	  <Authors>Adrian Holland</Authors>
+	  <PackageId>Outrage.EventSource.InMemoryDb</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Webefinity.EventSource.Core\Webefinity.EventSource.Core.csproj" />
+  </ItemGroup>
+
+</Project>
