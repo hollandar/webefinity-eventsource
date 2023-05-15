@@ -48,6 +48,9 @@ jobs:
     - name: Rebuild in Release
       run: dotnet build --no-restore --configuration Release
     
+    - name: Publish NuGet Package
+      run: find src -name '*.nupkg' | grep 'bin/Release/Webefinity' | xargs -i dotnet nuget push {} -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json
+    
     - run: dotnet tool update -g docfx
 
     - name: Publish
