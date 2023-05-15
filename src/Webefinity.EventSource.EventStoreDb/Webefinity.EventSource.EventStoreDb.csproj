@@ -5,11 +5,28 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
-		<Version>0.2.3</Version>
+		<Version>$(PRODUCT_VERSION)</Version>
 		<Description>A storage provider writing to EventStoreDb for the event sourcing framework Outrage.EventSource.Core.</Description>
 		<Authors>Adrian Holland</Authors>
-		<PackageId>Outrage.EventSource.EventStoreDb</PackageId>
+		<PackageId>Webefinity.EventSource.EventStoreDb</PackageId>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\License.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Webefinity.EventSource.Core\Webefinity.EventSource.Core.csproj" />

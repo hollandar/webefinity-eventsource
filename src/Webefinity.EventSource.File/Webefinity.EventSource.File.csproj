@@ -5,12 +5,28 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
-		<Version>0.2.3</Version>
+		<Version>$(PRODUCT_VERSION)</Version>
 		<Description>A storage provider writing to flat binary files for the event sourcing framework Outrage.EventSource.Core.</Description>
 		<Authors>Adrian Holland</Authors>
-		<PackageId>Outrage.EventSource.File</PackageId>
-
+		<PackageId>Webefinity.EventSource.File</PackageId>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\License.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.0" />

@@ -8,7 +8,7 @@ namespace Example
 {
     public class Address
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public int StreetNo { get; set; } = 0;
         public string StreetName { get; set; } = string.Empty;
         public string PostalCode { get; set; } = string.Empty;
