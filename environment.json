@@ -1,13 +1,3 @@
 {
-    "Variables": [
-      {
-        "Name": "release_version",
-        "Value": "0.2.5",
-        "Scope": {
-          "Environment": [
-            "Actions"
-          ]
-        }
-      }
-    ]
-  }
+    "VERSION": "0.2.5"
+}

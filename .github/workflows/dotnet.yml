@@ -39,10 +39,15 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     
+    - name: JSON to variables
+      uses: antifree/json-to-variables@v1.0.1
+      with:
+        filename: 'environment.json'
+        prefix: PRODUCT
+
     - name: Rebuild in Release
       run: dotnet build --no-restore --configuration Release
     
-
     - run: dotnet tool update -g docfx
 
     - name: Publish
