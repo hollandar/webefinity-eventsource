@@ -69,6 +69,7 @@ namespace Webefinity.EventSource.Core
         /// Construct an event serializer.
         /// </summary>
         /// <param name="eventType">The name to be used when serializing and deserializing the event.</param>
+        /// <param name="options">Serializer options to apply at serialization and deserialization.</param>
         public EventSerializer(string? eventType = null, JsonSerializerOptions options = null)
         {
             this.eventType = eventType ?? typeof(TEventType).Name;
