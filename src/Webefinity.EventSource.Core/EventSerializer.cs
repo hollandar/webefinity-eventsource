@@ -62,15 +62,17 @@ namespace Webefinity.EventSource.Core
     /// <typeparam name="TEventType"></typeparam>
     public class EventSerializer<TEventBase, TEventType> : EventSerializer<TEventBase> where TEventType : TEventBase
     {
+        private JsonSerializerOptions? options = null;
         private string eventType;
 
         /// <summary>
         /// Construct an event serializer.
         /// </summary>
         /// <param name="eventType">The name to be used when serializing and deserializing the event.</param>
-        public EventSerializer(string? eventType = null)
+        public EventSerializer(string? eventType = null, JsonSerializerOptions options = null)
         {
             this.eventType = eventType ?? typeof(TEventType).Name;
+            this.options = options;
         }
 
         /// <inheritdoc/>
@@ -79,7 +81,7 @@ namespace Webefinity.EventSource.Core
         /// <inheritdoc/>
         public override TEventBase? Deserialize(string json)
         {
-            return JsonSerializer.Deserialize<TEventType>(json);
+            return JsonSerializer.Deserialize<TEventType>(json, options);
         }
 
         /// <inheritdoc/>
@@ -91,7 +93,7 @@ namespace Webefinity.EventSource.Core
             }
 
             var eventType = (TEventType)@event;
-            return JsonSerializer.Serialize<TEventType>((TEventType)@event);
+            return JsonSerializer.Serialize<TEventType>((TEventType)@event, options);
         }
 
         /// <inheritdoc/>
