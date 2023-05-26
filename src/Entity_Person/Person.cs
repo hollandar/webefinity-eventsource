@@ -15,21 +15,15 @@ namespace Example
 
         public List<EventSerializer<PersonEventBase>> Serializers => serializers;
 
-        static List<EventSerializer<PersonEventBase>> serializers
+        static List<EventSerializer<PersonEventBase>> serializers = new List<EventSerializer<PersonEventBase>>()
         {
-            get
-            {
-                return new List<EventSerializer<PersonEventBase>>()
-                {
-                    new EventSerializer<PersonEventBase, CreatePersonEvent>("CreatePersonEvent"),
-                    new EventSerializer<PersonEventBase, AddPostalAddress>("AddPostalAddress"),
-                    new EventSerializer<PersonEventBase, AddStreetAddress>("AddStreetAddress"),
-                    new EventSerializer<PersonEventBase, UpdateEmailAddress>("UpdateEmailAddress"),
-                    new EventSerializer<PersonEventBase, UpdateMobilePhone>("UpdateMobilePhone"),
-                    new EventSerializer<PersonEventBase, SetAgeEvent>("SetAgeEvent"),
-                };
-            }
-        }
+            new EventSerializer<PersonEventBase, CreatePersonEvent>("CreatePersonEvent"),
+            new EventSerializer<PersonEventBase, AddPostalAddress>("AddPostalAddress"),
+            new EventSerializer<PersonEventBase, AddStreetAddress>("AddStreetAddress"),
+            new EventSerializer<PersonEventBase, UpdateEmailAddress>("UpdateEmailAddress"),
+            new EventSerializer<PersonEventBase, UpdateMobilePhone>("UpdateMobilePhone"),
+            new EventSerializer<PersonEventBase, SetAgeEvent>("SetAgeEvent"),
+        };
 
         public void Apply(CreatePersonEvent @event)
         {
