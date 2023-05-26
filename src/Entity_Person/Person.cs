@@ -13,7 +13,9 @@ namespace Example
         public List<Address> StreetAddresses { get; private set; } = new();
         public int Age { get; set; } = -1;
 
-        public List<EventSerializer<PersonEventBase>> Serializers
+        public List<EventSerializer<PersonEventBase>> Serializers => serializers;
+
+        static List<EventSerializer<PersonEventBase>> serializers
         {
             get
             {
