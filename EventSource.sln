@@ -3,23 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Cache.Dict", "src/Webefinity.EventSource.Cache.Dict\Webefinity.EventSource.Cache.Dict.csproj", "{DAA4EC0B-21FE-49FA-901D-EF890CFC298E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Cache.Dict", "src\Webefinity.EventSource.Cache.Dict\Webefinity.EventSource.Cache.Dict.csproj", "{DAA4EC0B-21FE-49FA-901D-EF890CFC298E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Core", "src/Webefinity.EventSource.Core\Webefinity.EventSource.Core.csproj", "{EEFDB910-DDD0-4AA3-A447-A0220183BBC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Core", "src\Webefinity.EventSource.Core\Webefinity.EventSource.Core.csproj", "{EEFDB910-DDD0-4AA3-A447-A0220183BBC1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.File", "src/Webefinity.EventSource.File\Webefinity.EventSource.File.csproj", "{FC81A5C7-F50D-4551-932F-684411240280}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.File", "src\Webefinity.EventSource.File\Webefinity.EventSource.File.csproj", "{FC81A5C7-F50D-4551-932F-684411240280}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Cache.Memory", "src/Webefinity.EventSource.Cache.Memory\Webefinity.EventSource.Cache.Memory.csproj", "{993AA958-02C4-4790-A192-F71D364FA87D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Cache.Memory", "src\Webefinity.EventSource.Cache.Memory\Webefinity.EventSource.Cache.Memory.csproj", "{993AA958-02C4-4790-A192-F71D364FA87D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.EventStoreDb", "src/Webefinity.EventSource.EventStoreDb\Webefinity.EventSource.EventStoreDb.csproj", "{A38E3422-8C9F-4278-9E8F-5CDDED191C82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.EventStoreDb", "src\Webefinity.EventSource.EventStoreDb\Webefinity.EventSource.EventStoreDb.csproj", "{A38E3422-8C9F-4278-9E8F-5CDDED191C82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "src/TestApp\TestApp.csproj", "{71AAEF9F-C277-4AA6-A311-6450EB29355C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "src\TestApp\TestApp.csproj", "{71AAEF9F-C277-4AA6-A311-6450EB29355C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity_Person", "src/Entity_Person\Entity_Person.csproj", "{BFD017AC-E245-424C-9E93-382F9D3C2C9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity_Person", "src\Entity_Person\Entity_Person.csproj", "{BFD017AC-E245-424C-9E93-382F9D3C2C9B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.InMemoryDb", "src/Webefinity.EventSource.InMemoryDb\Webefinity.EventSource.InMemoryDb.csproj", "{47A10E24-B724-4452-B576-93FD081798C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.InMemoryDb", "src\Webefinity.EventSource.InMemoryDb\Webefinity.EventSource.InMemoryDb.csproj", "{47A10E24-B724-4452-B576-93FD081798C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Tests", "src/Webefinity.EventSource.Tests\Webefinity.EventSource.Tests.csproj", "{9F5D5F8C-E803-4B95-BC80-96FCBFBBB687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webefinity.EventSource.Tests", "src\Webefinity.EventSource.Tests\Webefinity.EventSource.Tests.csproj", "{9F5D5F8C-E803-4B95-BC80-96FCBFBBB687}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7EC900C-5D86-456F-8C6F-C4D846EB12E0}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		environment.json = environment.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
