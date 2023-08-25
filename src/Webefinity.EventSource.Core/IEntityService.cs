@@ -21,7 +21,7 @@ namespace Webefinity.EventSource.Core
         /// <typeparam name="TEventBase">Entity event type.</typeparam>
         /// <param name="id">Entity id.</param>
         /// <returns>The entity.</returns>
-        ValueTask<TEntity> GetEntity<TEntity, TEventBase>(Guid id) where TEntity : IAggregateRootWithGuidKey, IAggregateRoot<TEventBase>, new();
+        ValueTask<TEntity> GetEntity<TEntity, TEventBase>(Guid id, bool storeInCache = true) where TEntity : IAggregateRootWithGuidKey, IAggregateRoot<TEventBase>, new();
 
         /// <summary>
         /// Return a rebuilt entity with a given long id.
@@ -32,7 +32,7 @@ namespace Webefinity.EventSource.Core
         /// <typeparam name="TEventBase">Entity event type.</typeparam>
         /// <param name="id">Entity id.</param>
         /// <returns>The entity.</returns>
-        ValueTask<TEntity> GetEntity<TEntity, TEventBase>(long id) where TEntity : IAggregateRootWithLongKey, IAggregateRoot<TEventBase>, new();
+        ValueTask<TEntity> GetEntity<TEntity, TEventBase>(long id, bool storeInCache = true) where TEntity : IAggregateRootWithLongKey, IAggregateRoot<TEventBase>, new();
 
         /// <summary>
         /// Return a rebuilt entity with a given string id.
@@ -43,7 +43,7 @@ namespace Webefinity.EventSource.Core
         /// <typeparam name="TEventBase">Entity event type.</typeparam>
         /// <param name="id">Entity id.</param>
         /// <returns>The entity.</returns>
-        ValueTask<TEntity> GetEntity<TEntity, TEventBase>(string id) where TEntity : IAggregateRootWithStringKey, IAggregateRoot<TEventBase>, new();
+        ValueTask<TEntity> GetEntity<TEntity, TEventBase>(string id, bool storeInCache = true) where TEntity : IAggregateRootWithStringKey, IAggregateRoot<TEventBase>, new();
 
         /// <summary>
         /// Apply an entity to an aggregate root.

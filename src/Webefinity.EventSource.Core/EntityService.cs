@@ -43,7 +43,7 @@ namespace Webefinity.EventSource.Core
 
 
         /// <inheritdoc/>
-        public async ValueTask<TEntity> GetEntity<TEntity, TEventBase>(Guid id) where TEntity : IAggregateRootWithGuidKey, IAggregateRoot<TEventBase>, new()
+        public async ValueTask<TEntity> GetEntity<TEntity, TEventBase>(Guid id, bool storeInCache = true) where TEntity : IAggregateRootWithGuidKey, IAggregateRoot<TEventBase>, new()
         {
             logger.FastLog(LogLevel.Debug, "Loading enity with id {0}".LogFormat(id));
 
@@ -63,7 +63,7 @@ namespace Webefinity.EventSource.Core
 
             logger.FastLog(LogLevel.Debug, "Took {0}ms".LogFormat(() => Stopwatch.GetElapsedTime(start).TotalMilliseconds));
 
-            if (this.entityCache is not null)
+            if (this.entityCache is not null && storeInCache)
             {
                 this.entityCache.UpdateCache(guidEntity, version);
             }
@@ -73,7 +73,7 @@ namespace Webefinity.EventSource.Core
 
 
         /// <inheritdoc/>
-        public async ValueTask<TEntity> GetEntity<TEntity, TEventBase>(long id) where TEntity : IAggregateRootWithLongKey, IAggregateRoot<TEventBase>, new()
+        public async ValueTask<TEntity> GetEntity<TEntity, TEventBase>(long id, bool storeInCache = true) where TEntity : IAggregateRootWithLongKey, IAggregateRoot<TEventBase>, new()
         {
             logger.FastLog(LogLevel.Debug, "Loading enity with id {0}".LogFormat(id));
             if (this.entityCache?.TryGetEntity(id, out var entity) ?? false)
@@ -92,7 +92,7 @@ namespace Webefinity.EventSource.Core
 
             logger.FastLog(LogLevel.Debug, "Took {0}ms".LogFormat(() => Stopwatch.GetElapsedTime(start).TotalMilliseconds));
 
-            if (this.entityCache is not null)
+            if (this.entityCache is not null && storeInCache)
             {
                 this.entityCache.UpdateCache(longEntity, version);
             }
@@ -100,7 +100,7 @@ namespace Webefinity.EventSource.Core
         }
 
         /// <inheritdoc/>
-        public async ValueTask<TEntity> GetEntity<TEntity, TEventBase>(string id) where TEntity : IAggregateRootWithStringKey, IAggregateRoot<TEventBase>, new()
+        public async ValueTask<TEntity> GetEntity<TEntity, TEventBase>(string id, bool storeInCache = true) where TEntity : IAggregateRootWithStringKey, IAggregateRoot<TEventBase>, new()
         {
             logger.FastLog(LogLevel.Debug, "Loading enity with id {0}".LogFormat(id));
             if (this.entityCache?.TryGetEntity(id, out var entity) ?? false)
@@ -119,7 +119,7 @@ namespace Webefinity.EventSource.Core
 
             logger.FastLog(LogLevel.Debug, "Took {0}ms".LogFormat(() => Stopwatch.GetElapsedTime(start).TotalMilliseconds));
 
-            if (this.entityCache is not null)
+            if (this.entityCache is not null && storeInCache)
             {
                 this.entityCache.UpdateCache(stringEntity, version);
             }

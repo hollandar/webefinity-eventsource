@@ -22,7 +22,7 @@ namespace Webefinity.EventSource.Core
         /// A serializer maps an AggregateRoot entity and an Event to an event name for storage, and identifies the possible events for an aggregate.
         /// 
         /// While this cant be an abstract static, you should be careful to instantiate the serializers only once.
-        /// Either encapsulate them in a private Management class or just delegate the this instance variable to a static collection.
+        /// Either encapsulate them in a private Management class or just delegate this instance variable to a static collection.
         /// 
         /// Either:
         /// static List<EventSerializer<YourEventBase>> serializers = new(){};
